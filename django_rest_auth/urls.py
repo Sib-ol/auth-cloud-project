@@ -5,5 +5,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # ✅ This is the key line to add
-    path('api/', include('social_accounts.urls')),
+    path('api/', include('accounts.urls')),
 ]
