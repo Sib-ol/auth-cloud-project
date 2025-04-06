@@ -1,13 +1,9 @@
-# django_rest_auth/urls.py or your main config/urls.py
-from django.http import JsonResponse
-from django.urls import path
 from django.contrib import admin
-
-def index(request):
-    return JsonResponse({"status": "Live!"})
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
+    
+    # 👇 Add this line for your auth APIs
+    path('api/', include('auth_app.urls')),  # Replace 'auth_app' with your app name
 ]
-
