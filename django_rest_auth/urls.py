@@ -3,7 +3,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
-    # ✅ Add this line to include your app's URLs
+
+    # ✅ This is the key line to add
     path('api/', include('social_accounts.urls')),
 ]
