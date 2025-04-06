@@ -4,11 +4,12 @@
 # Exit on error
 set -o errexit
 
-# Install dependencies
+echo "📦 Installing dependencies..."
 pip install -r requirements.txt
 
-# Collect static files
-python manage.py collectstatic --no-input
+echo "📦 Collecting static files..."
+python manage.py collectstatic --noinput
 
-# Run migrations
+echo "🧱 Running migrations..."
+python manage.py makemigrations
 python manage.py migrate
